@@ -1,4 +1,4 @@
-const controller = require("../controllers/pill.controller");
+const controller = require("../controllers/medicine.controller");
 const { verifyToken } = require("../middlewares/authJwt");
 
 module.exports = function (app) {
@@ -10,8 +10,12 @@ module.exports = function (app) {
 		next();
 	});
 
-    app.post("/api/pill/create", 
+    app.post("/api/medicine/create", 
         // verifyToken, 
-        controller.createNewPill);
+        controller.createNewMedicine);
+
+        app.get("/api/medicine/list-medicines", 
+        // verifyToken, 
+        controller.getListMedicines);
 
 };

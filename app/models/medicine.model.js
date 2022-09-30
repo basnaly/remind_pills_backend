@@ -1,7 +1,7 @@
 const mongoose = require("mongoose");
 
-const Pill = mongoose.model(
-    "Pill",
+const Medicine = mongoose.model(
+    "Medicine",
     new mongoose.Schema({
         // createUser: {
         //     type: mongoose.Schema.Types.ObjectId,
@@ -9,12 +9,15 @@ const Pill = mongoose.model(
         // },
         name: String,
         form: String,
+        quantity: Number,
         strength: Number,
         unit: String,
-        amount: Number,
+        packAmount: Number,
+        frequency: String,
         interval: String,
+        weekDay: String,
         note: String
     })
 );
 
-module.exports = Pill;
+module.exports = Medicine;

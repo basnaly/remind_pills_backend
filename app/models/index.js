@@ -5,6 +5,6 @@ const db = {}; //create object for db
 db.mongoose = mongoose;
 
 //db.user = require("./user.model");
-db.pill = require("./pill.model");
+db.medicine = require("./medicine.model");
 
 module.exports = db;
