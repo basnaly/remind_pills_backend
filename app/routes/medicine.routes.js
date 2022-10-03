@@ -14,8 +14,11 @@ module.exports = function (app) {
         // verifyToken, 
         controller.createNewMedicine);
 
-        app.get("/api/medicine/list-medicines", 
+    app.get("/api/medicine/list-medicines", 
         // verifyToken, 
         controller.getListMedicines);
 
+	app.post("/api/medicine/edit", 
+        // verifyToken, 
+        controller.saveEditedMedicine);
 };

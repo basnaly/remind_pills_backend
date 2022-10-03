@@ -15,6 +15,7 @@ const Medicine = mongoose.model(
         packAmount: Number,
         frequency: String,
         interval: String,
+        time: String,
         weekDay: String,
         note: String
     })

@@ -33,6 +33,7 @@ app.get("/", (req, res) => {
 
 // require("./app/routes/auth.routes")(app); 
 require("./app/routes/medicine.routes")(app);
+require("./app/routes/log.routes")(app);
 
 const PORT = process.env.PORT || 8081; // set port, listen for requests
 app.listen(PORT, () => {
