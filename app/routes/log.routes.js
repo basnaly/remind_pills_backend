@@ -10,11 +10,11 @@ module.exports = function (app) {
 		next();
 	});
 
-    app.post("/api/log/create", 
+    app.post("/api/logs/create", 
         // verifyToken, 
-        controller.createNewLog);
+        controller.createLog);
 
-        app.get("/api/log/list-logs", 
+        app.get("/api/logs/list-logs", 
         // verifyToken, 
         controller.getListLogs);
 

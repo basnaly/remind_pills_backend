@@ -1,7 +1,7 @@
 const db = require("../models");
 const Log = db.log;
 
-exports.createNewLog = async (req, res) => {
+exports.createLog = async (req, res) => {
 
     try {
         const log = new Log({
@@ -27,7 +27,7 @@ exports.getListLogs = async (req, res) => {
     try {
         const result = await Log.find({
 
-        }).select('_id date time')
+        }).select('_id medicineId quantity date time')
         .exec()
 
         console.log(result)
@@ -35,6 +35,8 @@ exports.getListLogs = async (req, res) => {
         let mappedListLogs = result.map(el => {
             return {
                 id: el._id,
+                medicineId: el.medicineId,
+                quantity: el.quantity,
                 date: el.date,
                 time: el.time,
             }

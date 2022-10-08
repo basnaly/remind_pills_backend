@@ -3,12 +3,13 @@ const mongoose = require("mongoose");
 const Log = mongoose.model(
     "Log",
     new mongoose.Schema({
-        medicine: {
+        medicineId: {
             type: mongoose.Schema.Types.ObjectId,
             ref: "Medicine"
         },
-        date: Date,
+        date: String,
         time: String,
+        quantity: String,
     })
 );
 
