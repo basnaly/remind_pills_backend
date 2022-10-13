@@ -14,8 +14,16 @@ module.exports = function (app) {
         // verifyToken, 
         controller.createLog);
 
-        app.get("/api/logs/list-logs", 
+    app.get("/api/logs/list-logs", 
         // verifyToken, 
         controller.getListLogs);
+
+	app.delete("/api/logs/delete-log", 
+		// verifyToken, 
+		controller.deleteSelectedLog);
+
+	app.post("/api/logs/log-data", 
+        // verifyToken, 
+        controller.updateLogData);
 
 };
